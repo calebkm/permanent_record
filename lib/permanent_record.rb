@@ -29,8 +29,8 @@ class PermanentRecord
 
   # Overrides equality to match ids.
   #
-  def == model
-    self.id == model.id
+  def == record
+    self.id == record.try(:id)
   end
 
   class << self

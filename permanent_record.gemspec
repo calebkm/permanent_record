@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'permanent_record'
-  s.version     = '0.0.1'
+  s.version     = '0.0.2'
   s.date        = '2014-10-01'
   s.summary     = 'Persistent Data without a DB.'
   s.description = 'ActiveRecord type READ ONLY data storage for small amounts of simple, unchanging data.'
