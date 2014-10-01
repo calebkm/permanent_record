@@ -94,7 +94,7 @@ Chapter.find_by_subtitle('What is Ruby?')
 
 ### Explicitly Declaring a Data Source ###
 
-If you have a specific constant you'd like to use other than the pluralized version of your model name - `CHAPTERS` in our case - you can declare it in your model explicitly: 
+If you have a specific constant you'd like to use other than the pluralized version of your model name - `CHAPTERS` in our case - you can declare it in your model explicitly with `source`: 
 
 ```ruby
 class Chapter < PermanentRecord
