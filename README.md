@@ -100,7 +100,7 @@ Note that PermanentRecord is a READ ONLY system - meaning you're only getting th
 
 ### Explicitly Declaring a Data Source ###
 
-If you have a specific constant you'd like to use other than `CHAPTERS`, you can declare it in your model explicitly: 
+If you have a specific constant you'd like to use other than the pluralized version of your model name - `CHAPTERS` in our case - you can declare it in your model explicitly: 
 
 ```ruby
 class Chapter < PermanentRecord
