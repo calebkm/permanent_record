@@ -1,5 +1,7 @@
 # PermanentRecord #
 
+An 'ActiveRecord' substitute for small amounts of persistent data.
+
 ## About ##
 
 Have you ever had a small amount of data that changed infrequently and didn't seem worth the hassle of persisting in a database? Maybe you're thinking "no, I have not" and that would be a reasonable answer. More than likely, most of the time a database will be the right choice. In the off chance you though "yes!", you can use `PermanentRecord` as a simple way to turn Plain Old Ruby Objects into Rails friendly, READ ONLY `ActiveRecord` like objects.
@@ -138,8 +140,8 @@ Now just load the data that standard YAML way and let your `PermanentRecord` cla
 
 Personally I like using Ruby where possible, which is why I like to save data in constants. But not everyone feels the same way as me, which is why you are free to store your data wherever you want ... just make sure the data is a well formed array of hashes and `PermanentRecord` will be happy.
 
-## Etc ##
-`PermanentRecord` is open and free for all. Please use, fork, update, send pull requests, etc. I made this because it was useful for my project, so maybe you'll find it useful too. If not, no worries! I can't believe you read this far though.
-
-## Appendix ##
+## Other Projects ##
 If you'd like to store data in a YAML file and you also want to CRUD it, you should check out [YAML Record](https://github.com/nicotaing/yaml_record). I took a few ideas from there when creating `PermanentRecord`, thanks guys! Some other folks have also created gems that attempt to solve the same problem as `PermanentRecord`. For example, [ConstantRecord](https://github.com/cpetschnig/constantrecord) by Christoph Petschnig and [Constant Record](https://github.com/nateware/constant_record) by Nate Wiger. Their gems might even be better than mine, have a look!
+
+## License, etc ##
+`PermanentRecord` is open and free for all. Please use, fork, update, send pull requests, etc. I made this because it was useful for my project, so maybe you'll find it useful too. If not, no worries! I can't believe you read this far though.
