@@ -130,7 +130,7 @@ Or maybe you'd prefer to save your data in a YAML file instead of a constant:
   ...
 ```
 
-Now just load the data that standard YAML way and let your `PermanentRecord` class know about it:
+Now just load the data the standard YAML way and let your `PermanentRecord` class know about it:
 
 ```ruby
   class Chapter < PermanentRecord
