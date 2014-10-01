@@ -62,7 +62,7 @@ class Chapter < PermanentRecord
 end
 ```
 
-That's it. `PermanentRecord` will automatically look for your previously defined `CHAPTERS` constant and use the data stored there to create each Chapter object. Since you're using Rails, you can now set up your routes just like any old `ActiveRecord` resource and access the Chapters as expected. Even if you *weren't* using Rails, PermanentRecord still provides some retrieval helpers that might be handy for your next project.
+That's it. `PermanentRecord` will automatically look for your previously defined `CHAPTERS` constant and use the data stored there to create each Chapter object. Since you're using Rails, you can now set up your routes just like any old `ActiveRecord` resource and access the Chapters as expected. Even if you *weren't* using Rails, `PermanentRecord` still provides some retrieval helpers that might be handy for your next project.
 
 ### Retrieving Data ###
 
