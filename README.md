@@ -98,7 +98,7 @@ Note that ConstantRecord is a READ ONLY system - meaning you're only getting the
 
 ### Explicitly Declaring a Data Source ###
 
-If you have a specific constant you'd like to use other than `CHAPTERS', you can declare it in your model explicitly: 
+If you have a specific constant you'd like to use other than `CHAPTERS`, you can declare it in your model explicitly: 
 
 ```ruby
 class Chapter < ConstantRecord
