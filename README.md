@@ -128,7 +128,7 @@ Or maybe you'd prefer to save your data in a YAML file instead of a constant:
   ...
 ```
 
-You can now serve this data to your `ConstantRecord` class:
+Now just load the data that standard YAML way and let your `ConstantRecord` class know about it:
 
 ```ruby
   class Chapter < ConstantRecord
