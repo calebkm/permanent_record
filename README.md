@@ -138,7 +138,7 @@ Now just load the data the standard YAML way and let your `PermanentRecord` clas
   end
 ```
 
-Personally I like using Ruby where possible, which is why I prefer saving data in constants. But not everyone feels the same way as me, which is why you're free to store your data wherever you want ... just make sure the data is a well formed array of hashes and `PermanentRecord` will be happy.
+Personally I like using Ruby where possible, which is why I prefer saving data in constants. But not everyone feels the same way as me ... just make sure the data is a well formed array of hashes and `PermanentRecord` will be happy.
 
 ## Compatibility ##
 
