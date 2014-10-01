@@ -8,10 +8,10 @@ Have you ever had a small amount of data that changed infrequently and didn't se
 
 ## When might this be useful? ##
 
-A hypothetic scenario: Let's pretend you're writing a book. Let's pretend it happens to be a book about Rails so you're setting it up as a Rails web application. The only persisted data you'll need to save are the chapter titles and the actual text content for the book. Obviously saving the text content of each chapter in a database would be silly - we can just write that directly into a view (ERB/HAML) file. That leaves only the names of our chapters... where should we put those? You could set up a database to store this small amount of unchanging data, or you could save the data in a CHAPTERS constant like:
+A hypothetic scenario: Let's pretend you're writing a book. Let's pretend it also happens to be a book about Rails and you've chosen to write the book as a Rails web application. The only persisted data you want to save are the chapter titles, plus the actual text content for the book. Obviously saving the text content of each chapter in a database would be silly - you can just write that directly into a view file. That leaves only the names of the chapters... where should you put those? You could set up a database to store this small amount of unchanging data, or you could save the data in a `CHAPTERS` constant like:
 
 ```ruby
-# chapters.rb
+# config/data/chapters.rb
 CHAPTERS = [
   {title: 'Introduction', subtitle: nil},
   {title: 'Chapter 1', subtitle: 'What is Ruby?'},
@@ -22,7 +22,7 @@ CHAPTERS = [
 ]
 ```
 
-But since we're using a Rails backend, it would nice if we could pretend the Chapter information stored in this constant was actually stored in a database. That way we could use all the goodies that Rails provides - like finders and path helpers. Here is where PermanentRecord comes in. Continue our story below in the Usage section. 
+But since you're using a Rails backend, it would nice if you could pretend the Chapter information stored in this constant was actually stored in a database. That way you could use all the goodies that Rails provides - like finders and path helpers. Here is where PermanentRecord comes in. Continue our hypothetical below in the Usage section. 
 
 
 ## Install ##
@@ -38,7 +38,7 @@ gem 'permanent_record'
 
 ### Storing the Data ###
 
-Our story ended off with you deciding to store a small amount of data in a constant in `chapters.rb`. That data was an array of hashes that represented the titles and subtitles of your new book:
+Our story ended off with you deciding to store a small amount of data in a constant, saved in the file `chapters.rb`. The data was an array of hashes that represented the titles and subtitles of your new book:
 
 ```ruby
 # config/data/chapters.rb
@@ -62,7 +62,7 @@ class Chapter < PermanentRecord
 end
 ```
 
-That's it. `PermanentRecord` will automatically look for your previously defined `CHAPTERS` constant and use the data stored there to create each Chapter object. Since we're using Rails, we can now set up our routes just like any old `ActiveRecord` resource and access our Chapters like we expect. Even if we *weren't* using Rails, PermanentRecord still provides some benefits that might be handy for your project: continue to the Retrieving Data section.
+That's it. `PermanentRecord` will automatically look for your previously defined `CHAPTERS` constant and use the data stored there to create each Chapter object. Since you're using Rails, you can now set up your routes just like any old `ActiveRecord` resource and access the Chapters as expected. Even if you *weren't* using Rails, PermanentRecord still provides some retrieval helpers that might be handy for your next project.
 
 ### Retrieving Data ###
 
