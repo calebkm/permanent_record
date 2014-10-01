@@ -110,6 +110,7 @@ You could even do something as daft as supplying the data directly:
 
 ```ruby
 class Chapter < ConstantRecord
+  # NOTE: You probably shouldn't actually do this.
   source [{title: 'Intro'}, {title: 'Chapter 1'}, ...]
 end
 ```
