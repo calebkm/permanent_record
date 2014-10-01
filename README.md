@@ -1,6 +1,6 @@
 # PermanentRecord #
 
-An 'ActiveRecord' substitute for small amounts of persistent data.
+An 'ActiveRecord` substitute for small amounts of persistent data.
 
 ## About ##
 
