@@ -41,7 +41,7 @@ gem 'permanent_record'
 Our story ended off with you deciding to store a small amount of data in a constant in `chapters.rb`. That data was an array of hashes that represented the titles and subtitles of your new book:
 
 ```ruby
-# chapters.rb
+# config/data/chapters.rb
 CHAPTERS = [
   {title: 'Introduction', subtitle: nil},
   {title: 'Chapter 1', subtitle: 'What is Ruby?'},
