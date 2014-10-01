@@ -1,4 +1,4 @@
 source 'http://rubygems.org'
 
-# Gem dependencies in constant_record.gemspec
+# Gem dependencies in permanent_record.gemspec
 gemspec

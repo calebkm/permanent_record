@@ -1,8 +1,8 @@
-# ConstantRecord #
+# PermanentRecord #
 
 ## About ##
 
-Have you ever had a small amount of data that changed infrequently and didn't seem worth the hassle of persisting in a database? Maybe you're thinking "no, I have not" and that would be a reasonable answer. More than likely, most of the time a database will be the right choice. In the off chance you though "yes!", you can use `ConstantRecord` as a simple way to turn Plain Old Ruby Objects into Rails friendly, READ ONLY `ActiveRecord` like objects.
+Have you ever had a small amount of data that changed infrequently and didn't seem worth the hassle of persisting in a database? Maybe you're thinking "no, I have not" and that would be a reasonable answer. More than likely, most of the time a database will be the right choice. In the off chance you though "yes!", you can use `PermanentRecord` as a simple way to turn Plain Old Ruby Objects into Rails friendly, READ ONLY `ActiveRecord` like objects.
 
 ## When might this be useful? ##
 
@@ -20,7 +20,7 @@ CHAPTERS = [
 ]
 ```
 
-But since we're using a Rails backend, it would nice if we could pretend the Chapter information stored in this constant was actually stored in a database. That way we could use all the goodies that Rails provides - like finders and path helpers. Here is where ConstantRecord comes in. Continue our story below in the Usage section. 
+But since we're using a Rails backend, it would nice if we could pretend the Chapter information stored in this constant was actually stored in a database. That way we could use all the goodies that Rails provides - like finders and path helpers. Here is where PermanentRecord comes in. Continue our story below in the Usage section. 
 
 
 ## Install ##
@@ -29,7 +29,7 @@ Add the gem the standard Gemfile way:
 
 ```ruby
 # Gemfile
-gem 'constant_record'
+gem 'permanent_record'
 ```
 
 ## Usage ##
@@ -56,11 +56,11 @@ Now let's set up your Chapter model that'll use this data:
 
 ```ruby
 # chapter.rb
-class Chapter < ConstantRecord
+class Chapter < PermanentRecord
 end
 ```
 
-That's it. `ConstantRecord` will automatically look for your previously defined `CHAPTERS` constant and use the data stored there to create each Chapter object. Since we're using Rails, we can now set up our routes just like any old `ActiveRecord` resource and access our Chapters like we expect. Even if we *weren't* using Rails, ConstantRecord still provides some benefits that might be handy for your project: continue to the Retrieving Data section.
+That's it. `PermanentRecord` will automatically look for your previously defined `CHAPTERS` constant and use the data stored there to create each Chapter object. Since we're using Rails, we can now set up our routes just like any old `ActiveRecord` resource and access our Chapters like we expect. Even if we *weren't* using Rails, PermanentRecord still provides some benefits that might be handy for your project: continue to the Retrieving Data section.
 
 ### Retrieving Data ###
 
@@ -92,7 +92,7 @@ Chapter.find_by_subtitle('What is Ruby?')
 
 ## CRUD-ing ##
 
-Note that ConstantRecord is a READ ONLY system - meaning you're only getting the R part of CRUD. If you need to create/update/delete your data, you'll need to do it the old fashioned way by manually changing the chapters.rb file, saving and re-deploying your application. `ConstantRecord` is for *constant* data. It shouldn't be changing very often, and there shouldn't be very much of it. If you find yourself wanting to CRUD often, you should probably just set up a database. 
+Note that PermanentRecord is a READ ONLY system - meaning you're only getting the R part of CRUD. If you need to create/update/delete your data, you'll need to do it the old fashioned way by manually changing the chapters.rb file, saving and re-deploying your application. `PermanentRecord` is for *permanent* data. It shouldn't be changing very often, and there shouldn't be very much of it. If you find yourself wanting to CRUD often, you should probably just set up a database. 
 
 ## Data options ##
 
@@ -101,7 +101,7 @@ Note that ConstantRecord is a READ ONLY system - meaning you're only getting the
 If you have a specific constant you'd like to use other than `CHAPTERS`, you can declare it in your model explicitly: 
 
 ```ruby
-class Chapter < ConstantRecord
+class Chapter < PermanentRecord
   source MY_CHAPTERS
 end
 ```
@@ -109,7 +109,7 @@ end
 You could even do something as daft as supplying the data directly: 
 
 ```ruby
-class Chapter < ConstantRecord
+class Chapter < PermanentRecord
   # NOTE: You probably shouldn't actually do this.
   source [{title: 'Intro'}, {title: 'Chapter 1'}, ...]
 end
@@ -128,18 +128,18 @@ Or maybe you'd prefer to save your data in a YAML file instead of a constant:
   ...
 ```
 
-Now just load the data that standard YAML way and let your `ConstantRecord` class know about it:
+Now just load the data that standard YAML way and let your `PermanentRecord` class know about it:
 
 ```ruby
-  class Chapter < ConstantRecord
+  class Chapter < PermanentRecord
     source YAML.load(File.read('config/data/chapters.yml'))
   end
 ```
 
-Personally I like using Ruby where possible, which is why I like to save data in constants. But not everyone feels the same way as me, which is why you are free to store your data wherever you want ... just make sure the data is a well formed array of hashes and `ConstantRecord` will be happy.
+Personally I like using Ruby where possible, which is why I like to save data in constants. But not everyone feels the same way as me, which is why you are free to store your data wherever you want ... just make sure the data is a well formed array of hashes and `PermanentRecord` will be happy.
 
 ## Etc ##
-`ConstantRecord` is open and free for all. Please use, fork, update, send pull requests, etc. I made this because it was useful for my project, so maybe you'll find it useful too. If not, no worries! I can't believe you read this far though.
+`PermanentRecord` is open and free for all. Please use, fork, update, send pull requests, etc. I made this because it was useful for my project, so maybe you'll find it useful too. If not, no worries! I can't believe you read this far though.
 
 ## Appendix ##
-If you'd like to store data in a YAML file and you also want to CRUD it, you should check out [YAML Record](https://github.com/nicotaing/yaml_record). I took a few ideas from there when creating `ConstantRecord`, thanks guys!
+If you'd like to store data in a YAML file and you also want to CRUD it, you should check out [YAML Record](https://github.com/nicotaing/yaml_record). I took a few ideas from there when creating `PermanentRecord`, thanks guys! Some other folks have also created gems that attempt to solve the same problem as `PermanentRecord`. For example, [PermanentRecord](https://github.com/cpetschnig/constantrecord) by Christoph Petschnig and [Constant Record ] by Nate Wiger. Their gems are likely even better than mine, have a look!

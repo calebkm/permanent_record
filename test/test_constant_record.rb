@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require 'constant_record'
+require 'permanent_record'
 
 # Our test data ... filled to the brim with books to amaze the senses! 
 TEST_BOOKS = [
@@ -16,13 +16,13 @@ MORE_BOOKS = [
 ]
 
 # Our default test class, without a source defined.
-class TestBook < ConstantRecord; end
+class TestBook < PermanentRecord; end
 
 # Our second test class, with the source data explicitly set.
-class TestBookWithSource < ConstantRecord; source MORE_BOOKS; end
+class TestBookWithSource < PermanentRecord; source MORE_BOOKS; end
 
 # And now let's test!
-class ConstantRecordTest < Minitest::Test
+class PermanentRecordTest < Minitest::Test
   def setup
     @books      = TestBook.all
     @book       = @books.last

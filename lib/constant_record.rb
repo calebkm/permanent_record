@@ -1,14 +1,14 @@
 require 'active_model'
 require 'active_support/core_ext/hash'
 
-class ConstantRecord
+class PermanentRecord
 
   # Get goodies for model_name, etc from ActiveModel.
   # This allows normal Rails path helper generation.
   #
   extend ActiveModel::Naming
 
-  # Constructs a new ConstantRecord instance.
+  # Constructs a new PermanentRecord instance.
   # Set instance variable and reader based on input hash.
   #
   def initialize attrs={}
@@ -21,7 +21,7 @@ class ConstantRecord
   end
 
   # For working with Rails routing helpers.
-  # Override in your ConstantRecord class to adjust URLs.
+  # Override in your PermanentRecord class to adjust URLs.
   #
   def to_param
     self.id
@@ -34,7 +34,7 @@ class ConstantRecord
   end
 
   class << self
-    # Returns collection of all ConstantRecord instances.
+    # Returns collection of all PermanentRecord instances.
     #
     # Example:
     #   >> Model.all
@@ -107,28 +107,28 @@ protected
   end
 
   class << self
-    # Declares source for ConstantRecord class data.
-    # ConstantRecord pretty much just wants to source any ol' array of hashes.
+    # Declares source for PermanentRecord class data.
+    # PermanentRecord pretty much just wants to source any ol' array of hashes.
     # If not declared, it'll default to a pluralized model name constant.
     # ie: If your model is called MyModel, this'll try and find MY_MODELS.
     #
     # The default example, with NO source defined:
-    #   class MyModel < ConstantRecord
+    #   class MyModel < PermanentRecord
     #   end
     #
     # Example with source constant explicitly defined:
-    #   class MyModel < ConstantRecord
+    #   class MyModel < PermanentRecord
     #     source SOME_CONSTANT
     #   end
     #
     # Another example with a source YAML file explicitly defined:
-    #  class MyModel < ConstantRecord
+    #  class MyModel < PermanentRecord
     #    source YAML.load(File.read('path/to/yaml/file.yml'))
     #  end
     #
     # I doubt you'd want to define your source as an explicit array of hash, 
     # but just to drive home this "any array of hashes" idea here's an example:
-    #  class MyModel < ConstantRecord
+    #  class MyModel < PermanentRecord
     #    source [{eyes: 'blue', hair: 'blonde'}, {eyes: 'brown', hair: 'green'}]
     #  end
     #
