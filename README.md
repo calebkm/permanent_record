@@ -36,7 +36,7 @@ gem 'constant_record'
 
 ### Storing the Data ###
 
-Our story ended off with you deciding to store a small amount of data in a constant, `chapters.rb'. That data was an array of hashes that represented the titles and subtitles of your new book:
+Our story ended off with you deciding to store a small amount of data in a constant in `chapters.rb`. That data was an array of hashes that represented the titles and subtitles of your new book:
 
 ```ruby
 # chapters.rb
