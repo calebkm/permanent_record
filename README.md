@@ -144,7 +144,7 @@ This gem was created for Rails 4 && Ruby 2. It's very possible it could work wit
 
 ## Other Projects ##
 
-If you'd like to store data in a YAML file and you also want to CRUD it, you should check out [YAML Record](https://github.com/nicotaing/yaml_record) by Nico Taing. I took a few ideas from there when creating `PermanentRecord`, thanks guys! Some other folks have also created gems that attempt to solve the same problem as `PermanentRecord`. For example, [ConstantRecord](https://github.com/cpetschnig/constantrecord) by Christoph Petschnig (maybe out of date) and [Constant Record](https://github.com/nateware/constant_record) by Nate Wiger. Their gems might even be better than mine, have a look!
+If you're looking for a simple DB-less way to store data, but you'd also like to CRUD it, you should check out [YAML Record](https://github.com/nicotaing/yaml_record) by Nico Taing. I took a few ideas from there when creating `PermanentRecord`, thanks guys! Some other folks have also created gems that attempt to solve the same problem as `PermanentRecord`. For example, [ConstantRecord](https://github.com/cpetschnig/constantrecord) by Christoph Petschnig (maybe out of date) and [Constant Record](https://github.com/nateware/constant_record) by Nate Wiger. Their gems might even be better than mine, have a look!
 
 ## License, etc ##
 
