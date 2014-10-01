@@ -18,7 +18,7 @@ CHAPTERS = [
   {title: 'Chapter 2', subtitle: 'What is Ruby on Rails?'},
   {title: 'Chapter 3', subtitle: 'System Setup'},
   ...
-  {title: 'Apendix Z', subtitle: 'Expert Rails Stuff'}
+  {title: 'Appendix Z', subtitle: 'Expert Rails Stuff'}
 ]
 ```
 
