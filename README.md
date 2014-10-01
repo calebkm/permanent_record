@@ -142,4 +142,4 @@ Personally I like using Ruby where possible, which is why I like to save data in
 `ConstantRecord` is open and free for all. Please use, fork, update, send pull requests, etc. I made this because it was useful for my project, so maybe you'll find it useful too. If not, no worries! I can't believe you read this far though.
 
 ## Appendix ##
-If you'd like to store data in a YAML file and you also want to CRUD it, you should check out [YAML Record](https://github.com/nicotaing/yaml_record). I took a few ideas from there when creating ConstantRecord, thanks guys!
+If you'd like to store data in a YAML file and you also want to CRUD it, you should check out [YAML Record](https://github.com/nicotaing/yaml_record). I took a few ideas from there when creating `ConstantRecord`, thanks guys!
