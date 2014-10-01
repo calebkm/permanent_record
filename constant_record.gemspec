@@ -12,5 +12,5 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'activemodel', '~> 4.1'   # This helps with Rails path helpers
   s.add_dependency 'activesupport', '~> 4.1' # This gives us some nice string manipulation methods
-  s.add_development_dependency 'rake'
+  s.add_development_dependency 'rake', '~> 10.3'
 end
