@@ -136,7 +136,7 @@ Personally I like using Ruby where possible, which is why I prefer saving data i
 
 ## CRUD-ing ##
 
-Note that PermanentRecord is a READ ONLY system - meaning you're only getting the R part of [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete). If you need to create/update/delete your data, you'll need to do it the old fashioned way by manually changing the `chapters.rb` file (or wherever you've saved your data), saving and re-deploying your application. `PermanentRecord` is for *permanent* data. IE, It shouldn't be changing very often, and there shouldn't be very much of it. If you find yourself wanting to CRUD often, you should probably just set up a database. 
+Note that `PermanentRecord` is a READ ONLY system - meaning you're only getting the R part of [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete). If you need to create/update/delete your data, you'll need to do it the old fashioned way by manually changing the `chapters.rb` file (or wherever you've saved your data), saving and re-deploying your application. `PermanentRecord` is for *permanent* data. IE, It shouldn't be changing very often, and there shouldn't be very much of it. If you find yourself wanting to CRUD often, you should probably just set up a database. 
 
 ## Compatibility ##
 
