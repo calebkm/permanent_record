@@ -64,7 +64,7 @@ That's it. `ConstantRecord` will automatically look for your previously defined 
 
 ### Retrieving Data ###
 
-There are a few options to find your data, which should all look pretty familiar if you're used to working with `ActiveRecord` objects:
+There are a few options for retrieving data which should all look pretty familiar if you're used to working with `ActiveRecord`:
 
 Find everything in one fell swoop:
 ```ruby
