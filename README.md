@@ -8,7 +8,7 @@ Have you ever had a small amount of data that changed infrequently and didn't se
 
 ## When might this be useful? ##
 
-An example: Let's pretend you're writing a book. Let's pretend it happens to be a book about Rails so you're setting it up as a Rails web application. The only persisted data you'll need to save are the chapter titles and the actual text content for the book. Obviously saving the text content of each chapter in a database would be silly - we can just write that directly into a view (ERB/HAML) file. That leaves only the names of our chapters... where should we put those? You could set up a database to store this small amount of unchanging data, or you could save the data in a CHAPTERS constant like:
+A hypothetic scenario: Let's pretend you're writing a book. Let's pretend it happens to be a book about Rails so you're setting it up as a Rails web application. The only persisted data you'll need to save are the chapter titles and the actual text content for the book. Obviously saving the text content of each chapter in a database would be silly - we can just write that directly into a view (ERB/HAML) file. That leaves only the names of our chapters... where should we put those? You could set up a database to store this small amount of unchanging data, or you could save the data in a CHAPTERS constant like:
 
 ```ruby
 # chapters.rb
