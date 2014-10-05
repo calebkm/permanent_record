@@ -1,5 +1,4 @@
 require 'bundler'
-
 require 'rake/testtask'
 
 Rake::TestTask.new do |t|
