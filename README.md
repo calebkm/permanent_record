@@ -22,7 +22,7 @@ CHAPTERS = [
 ]
 ```
 
-But since you're using a Rails backend, it would nice if you could pretend the Chapter information stored in this constant was actually stored in a database. That way you could use all the goodies that Rails provides - like finders and path helpers. Here is where `PermanentRecord` comes in. Continue our hypothetical situation below in the Usage section. 
+But since you're using a Rails backend, it would be nice if you could pretend the Chapter information stored in this constant was actually stored in a database. That way you could use all the goodies that Rails provides - like finders and path helpers. Here is where `PermanentRecord` comes in. Continue our hypothetical situation below in the Usage section. 
 
 
 ## Install ##
